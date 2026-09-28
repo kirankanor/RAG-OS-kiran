@@ -1,0 +1,16 @@
+# secrets
+.env
+
+# uv / python
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# app data (sqlite db, uploads)
+data/
+
+# phase drops for apply.ps1
+incomings/

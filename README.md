@@ -85,21 +85,15 @@ See `RESTRUCTURE_NOTES.md` for the full old-path → new-path mapping and the
 reasoning behind each placement decision.
 
 ## Status
+**Working today:** ingestion (parsing/normalization/chunking with tracked runs),
+users (register/auth/JWT/organizations), strategies (saved, versioned configs),
+experiments (run N strategies over the same files/queries), evaluation (datasets,
+recall/precision/MRR/nDCG, comparison), corpus_analysis (once phase 6 is applied),
+plus embeddings, retrieval, reranking, generation and the Streamlit app.
 
-**Working today:** ingestion (parsing/chunking), embeddings, retrieval
-(vector/hybrid/BM25, MMR, fusion, expansion), reranking, generation, and the
-Streamlit app that exercises all of it. The import cutover from the old
-`rag_os` package to `modules.*` / `shared.*` is complete — no compatibility
-shim remains, and every real module imports cleanly.
-
-**Not yet built** (still one-line stub files): business logic in `projects`,
-`documents`, `corpus_analysis`, `strategies`, `experiments` beyond the moved
-pipeline orchestration, `evaluation` beyond the moved metrics, `decisions`,
-`artifacts`, `users`, and both `apps/api` and `apps/worker`.
-
-**Known issue:** `apps/streamlit/pages/6_Reports.py` raises a `KeyError` when
-run against a completely empty database (zero runs) — a pre-existing
-empty-DataFrame edge case, not caused by the restructure.
+**Not yet built:** decisions, documents, projects, artifacts, the LLM-based
+evaluation metrics and the ragas/deepeval adapters, shared cross-cutting
+infrastructure, apps/api, apps/worker, migrations, scripts.
 
 **Untested:** the `local` and `cloud` extras haven't been exercised
 end-to-end yet (those deps are lazily imported inside method bodies). Run
