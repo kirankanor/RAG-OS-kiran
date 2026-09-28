@@ -1,1 +1,1 @@
-"""TODO: not yet implemented. Placeholder from target architecture skeleton."""
+from shared.ai.embeddings import embedder_registry  # noqa: F401

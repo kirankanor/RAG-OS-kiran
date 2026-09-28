@@ -1,1 +1,1 @@
-"""TODO: not yet implemented. Placeholder from target architecture skeleton."""
+from shared.ai.reranking import reranker_registry  # noqa: F401

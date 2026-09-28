@@ -1,1 +1,1 @@
-"""TODO: not yet implemented. Placeholder from target architecture skeleton."""
+from shared.retrieval import retriever_registry  # noqa: F401

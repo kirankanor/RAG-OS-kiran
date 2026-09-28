@@ -1,1 +1,1 @@
-"""TODO: not yet implemented. Placeholder from target architecture skeleton."""
+from modules.ingestion.infrastructure.chunkers import chunker_registry  # noqa: F401

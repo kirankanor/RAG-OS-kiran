@@ -1,1 +1,1 @@
-"""TODO: not yet implemented. Placeholder from target architecture skeleton."""
+from modules.ingestion.infrastructure.parsers import parser_registry  # noqa: F401

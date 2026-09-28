@@ -16,6 +16,8 @@ class Settings(BaseSettings):
     qdrant_url: str = "http://localhost:6333"
     qdrant_api_key: str = ""
     default_top_k: int = 5
+    jwt_secret: str = ""
+    jwt_expire_minutes: int = 60
 
     @property
     def uploads_dir(self) -> Path:
